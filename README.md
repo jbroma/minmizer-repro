@@ -1,19 +1,13 @@
-# rspack-repro
+# minimizer-repro
 
-- [Rspack website](https://rspack.dev/)
-- [Rspack repo](https://github.com/web-infra-dev/rspack)
+## Usage
 
-A GitHub template for creating a Rspack minimal reproducible example.
+1. Run `pnpm run build:rspack`
+2. Observe `./rspack-dist/main.js` not minified
 
-webpack is included for comparing the outputs.
+## Outputs
 
-## Usages
+Output are in `./outputs`
 
-`pnpm run build` would both run Rspack and webpack with config `./rspack.config.mjs`
-
-- Rspack will emits output in `./rspack-dist`
-- webpack will emits output in `./webpack-dist`
-
-`./webpack-dist` and `./rspack-dist` are purposely not added to `.gitignore`.
-
-It is recommended to commit these files so we quickly compare the outputs.
+- `./outputs/bundle-extension` is the output of `pnpm run build:rspack` with `.bundle` extension in the config
+- `./outputs/js-extension` is the output of `pnpm run build:webpack` with `.js` extension in the config

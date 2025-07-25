@@ -36,7 +36,7 @@ const config = {
   },
   optimization: {
     minimizer: [
-      // configure minmiezr to pick up .bundle extension
+      // configure minimizer to pick up .bundle extension
       isRunningRspack &&
         new rspack.SwcJsMinimizerRspackPlugin({
           test: /\.bundle$/,
